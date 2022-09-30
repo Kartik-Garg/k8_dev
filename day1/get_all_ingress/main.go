@@ -36,4 +36,14 @@ func main() {
 		fmt.Printf("Ingresses present are : %s\n", ingress.Name)
 	}
 
+	//getting it in the same format as k get ingresses
+	// for _, ingress := range ingresses.Items {
+	// 	fmt.Print(ingress.Name, ingress.Spec.TLS)
+	// }
+
+	result, err := clientset.NetworkingV1().Ingresses("default").Get(context.Background(), "example-ingress", metav1.GetOptions{})
+	fmt.Println(result.Name, result.Spec.IngressClassName, result.Spec.TLS, result.Status.LoadBalancer.Ingress, result.Spec.TLS)
+
+	//NOT ABLE TO GET PORT AND AGE OF THE INGRESS
+
 }

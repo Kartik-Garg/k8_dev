@@ -1,0 +1,13 @@
+Name:             example-ingress
+Labels:           <none>
+Namespace:        default
+Address:          localhost
+Ingress Class:    <none>
+Default backend:  <default>
+Rules:
+  Host        Path  Backends
+  ----        ----  --------
+  *           
+              /foo   foo-service:5678 (10.244.0.9:5678)
+Annotations:  <none>
+Events:       <none>
