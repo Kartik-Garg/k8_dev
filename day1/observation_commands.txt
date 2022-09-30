@@ -1,0 +1,24 @@
+this config file present here is in respect with kind Cluster, so we can install ingeress controller as well 
+
+
+--- commands to create controller after creating cluster using the config file---
+
+kubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
+
+kubectl wait --namespace ingress-nginx \
+  --for=condition=ready pod \
+  --selector=app.kubernetes.io/component=controller \
+  --timeout=90s
+
+-----------------------------------------------------
+
+to get IP Address of our kind node's docker container run:
+docker container inspect kind-control-plane \
+  --format '{{ .NetworkSettings.Networks.kind.IPAddress }}'
+
+
+--------------------------------------------------------
+
+curl localhost:81/foo
+-- output is foo 
+    81 because that's where our current cluster is running according to our config
