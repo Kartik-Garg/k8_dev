@@ -3,3 +3,4 @@ Though process -- >
 1) We are not creating a CR, so we wont have to register it? -- NO
 2) Since it communicates via api server, we have to get clientset
 3) It has to monitor the constant CRUD opertations on deployment resources, so we have to Informers, since watch is not efficient
+4) ------ HAD TO USE SHARED INFORMER FACTORY WITH OPTIONS --------
