@@ -1,0 +1,1 @@
+1) first we need to connect with the api server to get all the resources through the namespace
