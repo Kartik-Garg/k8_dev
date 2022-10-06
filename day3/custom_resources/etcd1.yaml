@@ -1,0 +1,6 @@
+apiVersion: kartikgarg.dev/v1alpha1
+kind: Etcd
+metadata:
+  name: etcd-1
+spec:
+  members: 3  

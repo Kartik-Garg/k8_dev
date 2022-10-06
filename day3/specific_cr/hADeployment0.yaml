@@ -1,0 +1,7 @@
+apiVersion: kartikgarg.dev/v1alpha1
+kind: HADeployment
+metadata:
+  name: hadeployment-0
+spec:
+  image: "string"
+  lables: "label1"  

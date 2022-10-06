@@ -1,0 +1,2 @@
+1) Write the CRD first
+2) Create the CRs

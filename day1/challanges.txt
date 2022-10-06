@@ -1,0 +1,4 @@
+1) Didn't get to learn a lot about scheme and restmapper, just know that scheme is a rule
+    or a template in CRDs based on which CRs are created.
+2) Not comforatable with controller and operator pattern, only know the high-level functioning
+    and design based on the diagrams and explanation provided in the book    
