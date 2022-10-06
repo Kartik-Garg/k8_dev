@@ -1,0 +1,45 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  #name must be in the form: <plural>.<group>
+  name: hadeployments.kartikgarg.dev
+spec:
+  group: kartikgarg.dev
+  names:
+    kind: HADeployment 
+    listKind: HADeployments
+    plural: hadeployments
+    singular: hadeployment
+    shortNames:
+    - hadeployment
+  scope: Namespaced
+  versions:
+    - name: v1alpha1
+      # Each version can be enabled/disabled using the served flag
+      served: true
+      # One and only one version must be marked as storage version
+      storage: true
+
+      schema:
+      #whatever is mentioned under this schema is what needs to be present in the CR as well
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                image:
+                  type: string
+                lables:
+                  type: string  
+            status:
+              type: object
+              properties:
+                completed:
+                  type: boolean            
