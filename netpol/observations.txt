@@ -1,0 +1,17 @@
+Thought process:
+To check if the label of a pod is modified, we can use informer?
+and we will have to compare it to the label mentioned in the netpol
+so we will need the informer or something else to keep track of the netpol as well
+
+approach: 
+used a clientset to get the network policy and store all the lables of allowed pods
+we can use that in informers to watch the pods, watch only the pods which match that label, if edited (udpated), we can trigger a warning
+
+
+--------------------
+
+informer for network policies:
+https://github.com/kubernetes/client-go/blob/master/informers/extensions/v1beta1/networkpolicy.go
+
+label selector
+https://medium.com/coding-kubernetes/using-k8s-label-selectors-in-go-the-right-way-733cde7e8630
