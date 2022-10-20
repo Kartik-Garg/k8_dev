@@ -1,0 +1,8 @@
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                     STORAGECLASS      REASON   AGE
+pvc-321e55e7-fdea-40e4-8513-28d5f51123d8   1Gi        RWO            Delete           Bound    default/csi-pvc           csi-hostpath-sc            57m
+pvc-91c2ffcb-f24c-48de-a024-9a8a46dfea95   20Gi       RWO            Delete           Bound    snapshot/restore-pvc      csi-hostpath-sc            20m
+pvc-b7819d24-f187-4f3d-a5c7-19915aa6e0cd   20Gi       RWO            Delete           Bound    snapshot/mysql-pv-claim   csi-hostpath-sc            51m
+
+
+kubectl describe pod csi-hostpathplugin-0
+kind-control-plane/172.19.0.2
