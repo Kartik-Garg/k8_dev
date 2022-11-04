@@ -1,0 +1,2 @@
+commands:
+kubectl delete validatingwebhookconfigurations.admissionregistration.k8s.io/deployment-validation
